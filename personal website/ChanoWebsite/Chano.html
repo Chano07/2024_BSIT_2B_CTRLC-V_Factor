@@ -6,227 +6,135 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow: hidden; /* Hide scrollbars */
-        }
-
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1; /* Place behind other content */
-            object-fit: cover;
-        }
-
-        .container {
-            display: flex;
-            justify-content: space-between; /* Align items horizontally with space between */
-            align-items: center;
-            height: 100vh;
-            padding: 0 20px; /* Add padding to the sides */
-        }
-
-        .profile {
-            text-align: left; /* Align text to the left */
-            color: white; /* Set text color to white for better visibility */
-        }
-
-        .profile-image {
-            width: 500px; /* 50% bigger than the original */
-            height: auto; /* Maintain aspect ratio */
-            border-radius: 10px; /* Rounded corners */
-            object-fit: cover;
-            margin-right: 70px; /* Move the profile image slightly to the right */
-        }
-
-        h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-        }
-
-        .about-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-right: 10px; /* Add margin between the button and the social media links */
-        }
-
-        .about-button:hover {
-            background-color: #0056b3;
-        }
-
-        .about-section {
-            background-color: #f9f9f9;
-            padding: 20px;
-            margin-top: 30px;
-        }
-
-        .about-section h2 {
-            margin-bottom: 10px;
-        }
-
-        .social-links {
-            text-align: left; /* Align text to the left */
-            margin-top: 10px; /* Add margin between the name and the social links */
-        }
-
-        .social-links a {
-            margin-right: 10px; /* Add margin between social media icons */
-            color: #007bff; /* Set social media link color */
-            text-decoration: none; /* Remove underline */
-        }
-
-        .social-links a:hover {
-            color: #0056b3; /* Change color on hover */
-        }
-
-        .visit-me {
-            text-align: left; /* Align text to the left */
-            margin-top: 10px; /* Add margin between the name and the social links */
-        }
-
-        .welcome-message {
-            text-align: center; /* Align text to the center */
-            margin-bottom: 20px; /* Add margin below the welcome message */
-            font-weight: bold; /* Emphasize the welcome message */
-            color: white; /* Set font color to white */
-        }
-
-        /* Navigation Bar Styles */
-        .navbar {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-        }
-
-        .navbar ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        .navbar li a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 5px;
-            background-color: transparent;
-            transition: background-color 0.3s ease; /* Smooth transition for background color */
-            position: relative; /* Required for ::after pseudo-element positioning */
-        }
-
-        .navbar li a::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background-color: transparent;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            transition: background-color 0.3s ease; /* Smooth transition for background color */
-            z-index: -1; /* Ensure pseudo-element is behind the actual link text */
-        }
-
-        .navbar li a:hover::after {
-            background-color: rgba(255, 255, 255, 0.3); /* Change background color on hover */
-        }
-
-        .navbar li a:hover {
-            background-color: #0056b3;
-        }
-
-        /* Keyframes for animation */
-        @keyframes playSound {
-            0% {
-                /* Add any styles you want to animate */
-                /* For example, scale the element */
-                transform: scale(1);
-                box-shadow: none;
-            }
-            50% {
-                /* Add any intermediate styles */
-                /* For example, scale the element up */
-                transform: scale(1.1);
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            }
-            100% {
-                /* Return to original styles */
-                /* For example, scale the element back to normal */
-                transform: scale(1);
-                box-shadow: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="Chano.css"> <!-- Link to the external CSS file -->
 </head>
 
 <body>
+
     <video class="video-background" autoplay loop muted>
-        <source src="video/bg.mp4" type="video/mp4">
+        <source src="video/aback.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <div class="welcome-message">
-        <p>Hello there, welcome to my cyber realm. Enjoy!</p>
+        <p>(ハロー、そこへようこそ、私のサイバーな世界へ。楽しんでください！)</p>
     </div>
 
     <div class="container">
         <div class="profile">
-            <h1>Hi There im Chano!</h1>
+            <h1>Kon'nichiwa! I'm Chano, your friendly anime enthusiast and aspiring IT student</h1>
+            <p>(こんにちは！私はチャノです。あなたのフレンドリーなアニメ愛好家であり、IT学生を目指しています)。</p>
             <div class="visit-me">
-                <p>You can also visit me on Facebook, Instagram, TikTok, and Gmail!</p>
+                <p>You can also visit me here!</p>
             </div>
             <div class="social-links">
-                <a href="https://www.facebook.com/">Facebook</a>
-                <a href="https://www.instagram.com/">Instagram</a>
-                <a href="https://www.tiktok.com/">TikTok</a>
-                <a href="mailto:factorchristianmarlon@gmail.com">Gmail</a>
+                <a href="https://www.facebook.com/" class="facebook">Facebook</a>
+                <a href="https://www.instagram.com/" class="instagram">Instagram</a>
+                <a href="https://www.tiktok.com/" class="tiktok">TikTok</a>
+                <a href="mailto:factorchristianmarlon@gmail.com" class="gmail">Gmail</a>
+
+                <div class="empty-text">
+                    <p>人生は一期一会。出会いと別れが織りなす物語は、誰もが一度きりの奇跡。悲しみも喜びも、すべてがかけがえのない宝物。だからこそ、今を大切にし、未来への道を輝かせよう。</p>
+                    <p>(Life is a series of once-in-a-lifetime encounters. The story woven by meetings and farewells is a unique miracle for everyone. Both sadness and joy are irreplaceable treasures. That's why it's important to cherish the present and illuminate the path to the future.)</p>
+                </div>
             </div>
         </div>
-        <img class="profile-image" src="Chano/image/uni.jpg" alt="Profile Picture">
+        <img class="profile-image" src="Chano/image/ysay.png" alt="Profile Picture">
     </div>
 
-    <div id="about" class="about-section">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae augue tellus. Donec sit amet est sed justo
-            sagittis vehicula.</p>
-        <p>Suspendisse potenti. Proin bibendum consequat aliquam. Sed consectetur justo sit amet augue aliquam
-            molestie.</p>
+
+    <div class="gallery-section">
+        <div id="gallery-section" class="gallery-section">
+            <h2>Gallery</h2>
+            <div class="audio-player">
+                <audio id="audio-player" controls autoplay loop>
+                    <source src="Chano/sound/naruto rain.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </div>
+
+        <!-- 1 -->
+        <div class="gallery-item">
+            <img src="Chano/image/ako1.jpg" alt="Gallery Image 1">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/ako1.jpg" alt="Gallery Image 2">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/ako1.jpg" alt="Gallery Image 3">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/ako1.jpg" alt="Gallery Image 4">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/ako1.jpg" alt="Gallery Image 5">
+        </div>
+        <!-- 2 -->
+        <div class="gallery-item">
+            <img src="Chano/image/dog2.jpg" alt="Gallery Image 6">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/dog1.jpg" alt="Gallery Image 7">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/cat1.jpg" alt="Gallery Image 8">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/cat2.jpg" alt="Gallery Image 9">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/cat3.jpg" alt="Gallery Image 10">
+        </div>
+        <!-- 3 -->
+        <div class="gallery-item">
+            <img src="Chano/image/fam1.jpeg" alt="Gallery Image 11">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/fam2.jpg" alt="Gallery Image 12">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/fam3.jpg" alt="Gallery Image 13">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/fam4.jpg" alt="Gallery Image 14">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/fam5.jpg" alt="Gallery Image 15">
+        </div>
+        <!-- 4 -->
+        <div class="gallery-item">
+            <img src="Chano/image/black1.jpg" alt="Gallery Image 16">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/brown.jpg" alt="Gallery Image 17">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/black2.jpg" alt="Gallery Image 18">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/brown2.jpg" alt="Gallery Image 19">
+        </div>
+        <div class="gallery-item">
+            <img src="Chano/image/black3.jpg" alt="Gallery Image 20">
+        </div>
+
     </div>
+
 
     <!-- Navigation Bar -->
     <div class="navbar">
         <ul>
             <li><a href="#" onmouseover="playSound('myAudio')">Home</a></li>
-            <li><a href="#" onmouseover="playSound('myAudio')">Achievements</a></li>
-            <li><a href="#" onmouseover="playSound('myAudio')">Gallery</a></li>
-            <li><a href="#about" onmouseover="playSound('myAudio')">About Me</a></li>
+            <li><a href="#gallery-section" onmouseover="playSound('myAudio')">Gallery</a></li>
+            <li><a href="Chano/PDFs/CHANO RESUME UPDATED.pdf" onmouseover="playSound('myAudio')"> about-me</a></li>
         </ul>
     </div>
 
-    <!-- Audio element for sound -->
     <audio id="myAudio">
         <source src="Chano/sound/click.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
     </audio>
 
-    <!-- JavaScript to control audio playback -->
+    <!-- minecraft sound -->
     <script>
         function playSound(soundId) {
             const audioElement = document.getElementById(soundId);
@@ -238,7 +146,17 @@
                 console.error(`Audio element with id '${soundId}' not found.`);
             }
         }
+
+        window.addEventListener('load', function () {
+            const backgroundMusic = document.getElementById('audio-player');
+            if (backgroundMusic.paused) {
+                backgroundMusic.play();
+            }
+        });
     </script>
+
+
+
 </body>
 
 </html>
